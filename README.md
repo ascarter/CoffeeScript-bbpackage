@@ -1,0 +1,4 @@
+CoffeeScript.bbpackage
+======================
+
+BBEdit CoffeeScript
