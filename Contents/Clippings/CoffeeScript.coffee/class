@@ -1,0 +1,6 @@
+#INDENT#
+class #SELSTART#name#SELEND#
+  constructor: (@#PLACEHOLDERSTART#param#PLACEHOLDEREND#) ->
+  
+  #PLACEHOLDERSTART#method#PLACEHOLDEREND#: ->
+

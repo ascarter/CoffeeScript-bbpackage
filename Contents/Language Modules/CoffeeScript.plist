@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+BBEdit Language Module for CoffeeScript
+
+Based on:
+	pmuellr   - https://gist.github.com/pmuellr/1004413
+	evandavis - https://gist.github.com/evandavis/3219871
+
+Copyright (C) 2014 Andrew Carter
+-->
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	
+	<key>BBLMLanguageDisplayName</key>
+	<string>CoffeeScript</string>
+	
+	<key>BBLMLanguageCode</key>
+	<string>CoSc</string>
+	
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.cs</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.coffee</string>
+		</dict>
+	</array>
+	
+	<key>BBLMPreferredFilenameExtension</key>
+	<string>coffee</string>
+	
+	<key>BBLMReferenceSearchURLTemplate</key>
+	<string>http://www.coffeescript.org?__SYMBOLNAME__</string>
+	
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	
+	<key>BBLMScansFunctions</key>
+	<true/>
+	
+	<key>BBLMColorsSyntax</key>
+	<true/>
+
+	<key>BBLMKeywordList</key>
+	<array>
+		<string><![CDATA[->]]></string>
+		<string><![CDATA[=>]]></string>
+		<string>and</string>
+		<string>catch</string>
+		<string>class</string>
+		<string>do</string>
+		<string>else</string>
+		<string>extends</string>
+		<string>finally</string>
+		<string>for</string>
+		<string>if</string>
+		<string>in</string>
+		<string>is</string>
+		<string>isnt</string>
+		<string>new</string>
+		<string>not</string>
+		<string>of</string>
+		<string>or</string>
+		<string>return</string>
+		<string>super</string>
+		<string>switch</string>
+		<string>then</string>
+		<string>this</string>
+		<string>try</string>
+		<string>typeof</string>
+		<string>unless</string>
+		<string>until</string>
+		<string>when</string>
+		<string>while</string>
+	</array>
+	
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<string><![CDATA[@]]></string>
+		<string>false</string>
+		<string>no</string>
+		<string>null</string>
+		<string>off</string>
+		<string>on</string>
+		<string>true</string>
+		<string>yes</string>
+	</array>
+	
+	<key>BBLMCommentLineDefault</key>
+	<string># </string>
+	
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Character Class</key>
+		<string><![CDATA[0-9A-Z_a-z\@\=\-\>\?]]></string>
+		
+		<key>Comment Pattern</key>
+		<string><![CDATA[
+		(?x:
+			(\#.*?$) |						(?# Line comment)  
+			(?s:^\s*\#\#\#.+?\s*\#\#\#)		(?# Block comment)
+		)
+		]]></string>
+
+		<key>String Pattern</key>
+		<string><![CDATA[
+		(?x:
+			("(\\"|[^"\r]|\\\r)*") |  (?# Double-quote)
+			('(\\'|[^'\r]|\\\r)*') |  (?# Single-quote)
+			(?s:                      (?# Here-document)
+				<<-?(?P<delim>\w+)
+				.*?
+				(?P=delim)
+			)
+		)
+		]]></string>
+		
+		<key>Function Pattern</key>
+		<string><![CDATA[
+			(?sx:
+				^\s*
+				(?P<function>
+					(?P<function_name>
+						[a-zA-Z0-9_@]+
+					)
+					\W*(=|:)\W*(\([a-zA-Z0-9_, ]+\))?\W*(\-\>|\=\>)\W*
+				)
+			)
+		]]>
+		</string>
+		
+		<key>Skip Pattern</key>
+		<string><![CDATA[
+		(?x:
+			(?P>comment) |
+			(?P>string)
+		)]]>
+		</string>
+	</dict>
+</dict>
+</plist>
