@@ -29,6 +29,9 @@ Copyright (C) 2014 Andrew Carter
 	<key>BBLMIsCaseSensitive</key>
 	<true/>
 	
+	<key>BBLMSupportsTextCompletion</key>
+	<true/>
+	
 	<key>BBLMSuffixMap</key>
 	<array>
 		<dict>
@@ -145,7 +148,7 @@ Copyright (C) 2014 Andrew Carter
         <string>###</string>
         <key>Open Line Comments</key>
         <string>#</string>
-        		
+
 		<key>Function Pattern</key>
 		<string><![CDATA[
 			(?sx:
@@ -154,7 +157,7 @@ Copyright (C) 2014 Andrew Carter
 					(?P<function_name>
 						[a-zA-Z0-9_@]+
 					)
-					\W*(=|:)\W*(\([a-zA-Z0-9_, ]+\))?\W*(\-\>|\=\>)\W*
+					\W*(=|:)\W*(\([^()]*?\)|\W*)\s*([=-]>)
 				)
 			)
 		]]>
