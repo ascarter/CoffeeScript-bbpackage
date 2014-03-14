@@ -1,13 +1,12 @@
-CoffeeScript.bbpackage
-======================
+CoffeeScript for BBEdit
+=======================
 
-BBEdit CoffeeScript support
+CoffeeScript support for BBEdit.
 
 Adds:
 
 * Syntax highlighting
 * Language defaults
 * Clippings
-* Helper scripts for compiling CoffeeScript
 
 [BBEdit Codeless Language Modules](http://www.barebones.com/support/develop/clm.html)
