@@ -1,11 +1,6 @@
 #!/bin/sh
 
-if [[ -e ~/.bbedit/packages/coffeescript.variables ]]
-then
-	source ~/.bbedit/packages/coffeescript.variables
-else
-	export JS2COFFEE=/usr/local/bin/js2coffee
-fi
+export JS2COFFEE=/usr/local/bin/js2coffee
 
 if [[ ! -e $JS2COFFEE ]]
 then
