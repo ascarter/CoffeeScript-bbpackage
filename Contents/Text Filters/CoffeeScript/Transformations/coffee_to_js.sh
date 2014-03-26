@@ -1,9 +1,9 @@
 #!/bin/sh
 
-if [[ ! -e /usr/local/bin/coffee ]]
-then
-  echo "please sudo npm install -g coffee-script";
-  exit;
-fi
+BASE_FOLDER=`dirname "$0"`
+SUPPORT_FOLDER="$BASE_FOLDER/../../../Resources/"
 
-PATH=$PATH:/usr/local/bin/ coffee -p $BB_DOC_PATH
+source "$SUPPORT_FOLDER/npm_paths.sh"
+COFFEE_BIN="$NODE_BINARIES_PATH/coffee"
+
+PATH=$PATH:"$NODE_BINARIES_PATH" coffee -p $BB_DOC_PATH

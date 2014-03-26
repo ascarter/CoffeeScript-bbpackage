@@ -1,11 +1,9 @@
 #!/bin/sh
 
-export JS2COFFEE=/usr/local/bin/js2coffee
+BASE_FOLDER=`dirname "$0"`
+SUPPORT_FOLDER="$BASE_FOLDER/../../../Resources/"
 
-if [[ ! -e $JS2COFFEE ]]
-then
-  echo "please sudo npm install -g js2coffee coffee-script";
-  exit;
-fi
+source "$SUPPORT_FOLDER/npm_paths.sh"
+JS2COFFEE_BIN="$NODE_BINARIES_PATH/js2coffee"
 
-$JS2COFFEE $BB_DOC_PATH
+$JS2COFFEE_BIN $BB_DOC_PATH
