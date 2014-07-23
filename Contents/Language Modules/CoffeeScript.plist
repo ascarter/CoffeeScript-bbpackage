@@ -10,158 +10,159 @@ Based on:
 Copyright (C) 2014 Andrew Carter
 -->
 <plist version="1.0">
-<dict>
-	<key>BBEditDocumentType</key>
-	<string>CodelessLanguageModule</string>
-	
-	<key>BBLMLanguageDisplayName</key>
-	<string>CoffeeScript</string>
-	
-	<key>BBLMLanguageCode</key>
-	<string>CoSc</string>
-	
-	<key>BBLMColorsSyntax</key>
-	<true/>
+    <dict>
+    <key>BBEditDocumentType</key>
+    <string>CodelessLanguageModule</string>
+    <key>BBLMLanguageDisplayName</key>
+    <string>CoffeeScript</string>
+    <key>BBLMLanguageCode</key>
+    <string>CoSc</string>
+    <key>BBLMColorsSyntax</key>
+    <true/>
+    <key>BBLMScansFunctions</key>
+    <true/>
+    <key>BBLMFunctionScannerDoesFoldsToo</key>
+    <true/>
+    <key>BBLMFiltersRunsForSpellChecking</key>
+    <true/>
+    <key>BBLMIsCaseSensitive</key>
+    <true/>
+    <key>BBLMSupportsTextCompletion</key>
+    <true/>
+    <key>BBLMSuffixMap</key>
+    <array>
+        <dict>
+            <key>BBLMLanguageSuffix</key>
+            <string>.cs</string>
+        </dict>
+        <dict>
+            <key>BBLMLanguageSuffix</key>
+            <string>.coffee</string>
+        </dict>
+    </array>
+    <key>BBLMPreferredFilenameExtension</key>
+    <string>coffee</string>
+    <key>BBLMReferenceSearchURLTemplate</key>
+    <string>http://www.coffeescript.org?__SYMBOLNAME__</string>
+    <key>BBLMKeywordList</key>
+    <array>
+        <string><![CDATA[->]]></string>
+        <string><![CDATA[=>]]></string>
+        <string>and</string>
+        <string>catch</string>
+        <string>class</string>
+        <string>do</string>
+        <string>else</string>
+        <string>extends</string>
+        <string>finally</string>
+        <string>for</string>
+        <string>if</string>
+        <string>in</string>
+        <string>is</string>
+        <string>isnt</string>
+        <string>new</string>
+        <string>not</string>
+        <string>of</string>
+        <string>or</string>
+        <string>return</string>
+        <string>super</string>
+        <string>switch</string>
+        <string>then</string>
+        <string>this</string>
+        <string>try</string>
+        <string>typeof</string>
+        <string>unless</string>
+        <string>until</string>
+        <string>when</string>
+        <string>while</string>
+    </array>
+    <key>BBLMPredefinedNameList</key>
+    <array>
+        <string><![CDATA[@]]></string>
+        <string>false</string>
+        <string>no</string>
+        <string>null</string>
+        <string>off</string>
+        <string>on</string>
+        <string>true</string>
+        <string>yes</string>
+    </array>
+    <key>BBLMCommentLineDefault</key>
+    <string># </string>
+    <key>Language Features</key>
+    <dict>
+        <key>Identifier and Keyword Character Class</key>
+        <string><![CDATA[0-9A-Z_a-z\@\=\-\>\?]]></string>
 
-	<key>BBLMScansFunctions</key>
-	<true/>
-	
-	<key>BBLMIsCaseSensitive</key>
-	<true/>
-	
-	<key>BBLMSupportsTextCompletion</key>
-	<true/>
-	
-	<key>BBLMSuffixMap</key>
-	<array>
-		<dict>
-			<key>BBLMLanguageSuffix</key>
-			<string>.cs</string>
-		</dict>
-		<dict>
-			<key>BBLMLanguageSuffix</key>
-			<string>.coffee</string>
-		</dict>
-	</array>
-	
-	<key>BBLMPreferredFilenameExtension</key>
-	<string>coffee</string>
-	
-	<key>BBLMReferenceSearchURLTemplate</key>
-	<string>http://www.coffeescript.org?__SYMBOLNAME__</string>
-	
-	<key>BBLMKeywordList</key>
-	<array>
-		<string><![CDATA[->]]></string>
-		<string><![CDATA[=>]]></string>
-		<string>and</string>
-		<string>catch</string>
-		<string>class</string>
-		<string>do</string>
-		<string>else</string>
-		<string>extends</string>
-		<string>finally</string>
-		<string>for</string>
-		<string>if</string>
-		<string>in</string>
-		<string>is</string>
-		<string>isnt</string>
-		<string>new</string>
-		<string>not</string>
-		<string>of</string>
-		<string>or</string>
-		<string>return</string>
-		<string>super</string>
-		<string>switch</string>
-		<string>then</string>
-		<string>this</string>
-		<string>try</string>
-		<string>typeof</string>
-		<string>unless</string>
-		<string>until</string>
-		<string>when</string>
-		<string>while</string>
-	</array>
-	
-	<key>BBLMPredefinedNameList</key>
-	<array>
-		<string><![CDATA[@]]></string>
-		<string>false</string>
-		<string>no</string>
-		<string>null</string>
-		<string>off</string>
-		<string>on</string>
-		<string>true</string>
-		<string>yes</string>
-	</array>
-	
-	<key>BBLMCommentLineDefault</key>
-	<string># </string>
-	
-	<key>Language Features</key>
-	<dict>
-		<key>Identifier and Keyword Character Class</key>
-		<string><![CDATA[0-9A-Z_a-z\@\=\-\>\?]]></string>
+        <key>Comment Pattern</key>
+        <string><![CDATA[
+            (?x:
+                (?s:\#\#\#.*?\#\#\#) |
+                (?> \#.*$)
+            )]]>
+        </string>
+    
+        <key>String Pattern</key>
+        <string><![CDATA[
+            (?x:
+                ((?s:
+                  (?P<multistrstart>(?:"""|'''|(\/\/\/)|`)).*?(?<!\\)(?P=multistrstart)
+                ) |
+                (?:
+                  (?P<strstart>(?:"|'|(\/))).*?(?<!\\)(?P=strstart)
+                ))
+                (?# if backreferences 4 or 5 are set then the string was a regex)
+                (?# match the optional regex options at the end)
+                (?(4)[a-zA-Z]*)
+                (?(5)[a-zA-Z]*)
+            )]]>
+        </string>
+    
+        <key>Skip Pattern</key>
+        <string><![CDATA[
+            (?x:
+              (?P>comment) |
+              (?P>string)
+            )]]>
+        </string>
 
-        <key>Open Strings 1</key>
-        <string>"</string>
-        <key>Close Strings 1</key>
-        <string>"</string>
-        <key>Escape Char in Strings 1</key>
-        <string>\</string>
-        <key>End-of-line Ends Strings 1</key>
-        <false/>
+        <!--
+          Functions are defined by: <function_name> (:|=) (<string>) (-|=)>
+        -->
+        <key>Function Pattern</key>
+        <string><![CDATA[
+            (?x:
+                (?P<leadspace>^[\t ]*)
+                (?P<function>
+                  (?P<function_name>
+                    [a-zA-Z0-9_-]+                        
+                  )
 
-        <key>Open Strings 2</key>
-        <string>'</string>
-        <key>Close Strings 2</key>
-        <string>'</string>
-        <key>End-of-line Ends Strings 2</key>
-        <false/>
+                  (?# Prototype assignment)
+                  (?: [\:]{2} [a-zA-Z0-9_-]* )?
 
-        <key>Open Strings 3</key>
-        <string>"""</string>
-        <key>Close Strings 3</key>
-        <string>"""</string>
-        <key>Escape Char in Strings 3</key>
-        <string>\</string>
-        <key>End-of-line Ends Strings 3</key>
-        <false/>
+                  (?# Equals sign or colon with optional spaces around it)
+                  [ \t]* (?:(\=|\:)) [ \t]*
 
-        <key>Open Strings 4</key>
-        <string>`</string>
-        <key>Close Strings 4</key>
-        <string>`</string>
-        <key>End-of-line Ends Strings 4</key>
-        <false/>
+                  (?# optional parameters, followed by optional spaces or tabs)
+                  (?:\(.*?\)[ \t]*)?
 
-        <key>Open Strings 5</key>
-        <string>///</string>
-        <key>Close Strings 5</key>
-        <string>///</string>
-        <key>End-of-line Ends Strings 5</key>
-        <false/>
+                  (?# Regular or fat arrow, optional space)
+                  (?:(\=|\-))\>[ \t]*
 
-        <key>Open Block Comments</key>
-        <string>###</string>
-        <key>Close Block Comments</key>
-        <string>###</string>
-        <key>Open Line Comments</key>
-        <string>#</string>
+                  (?# One-line functions are OK)
+                  .*$
 
-		<key>Function Pattern</key>
-		<string><![CDATA[
-			(?sx:
-				^\s*
-				(?P<function>
-					(?P<function_name>
-						[a-zA-Z0-9_@]+
-					)
-					\W*(=|:)\W*(\([^()]*?\)|\W*)\s*([=-]>)
-				)
-			)
-		]]>
-		</string>		
-	</dict>
-</dict>
-</plist>
+                  (?# Function body)
+                  (?:
+                    (?:
+                      (?: \r(?P=leadspace)[ \t]+(?:.+)) |
+                      (?: \s*$)
+                    )
+                  )*
+                )
+            )]]>
+        </string>
+    </dict>
+    </dict>
+    </plist>
