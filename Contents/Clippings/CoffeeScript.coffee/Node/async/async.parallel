@@ -1,0 +1,12 @@
+#INDENT#async.parallel [
+  (callback) ->
+    <##>
+
+    callback(null, <#*results#>)
+  (callback) ->
+    <##>
+
+    callback(null, <#*results#>)
+  <#, fn#>
+  ], (err, results) ->
+    <##>

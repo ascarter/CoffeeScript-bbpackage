@@ -1,0 +1,8 @@
+
+#INDENT#<#server#>.<#get#> "/<#object#>", <#before_middleware#>,
+  (req, res, next) ->
+    <##>
+    res.render "<##>",
+      k<##>
+
+
