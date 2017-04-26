@@ -33,10 +33,6 @@ Copyright (C) 2014 Andrew Carter
     <array>
         <dict>
             <key>BBLMLanguageSuffix</key>
-            <string>.cs</string>
-        </dict>
-        <dict>
-            <key>BBLMLanguageSuffix</key>
             <string>.coffee</string>
         </dict>
     </array>
