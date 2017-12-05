@@ -128,36 +128,35 @@ Copyright (C) 2014 Andrew Carter
         <key>Function Pattern</key>
         <string><![CDATA[
             (?x:
-                (?P<leadspace>^[\t ]*)
-                (?P<function>
-                  (?P<function_name>
-                    [a-zA-Z0-9_-]+                        
-                  )
+				(?P<leadspace>^[\t ]*)
+				(?P<function>
+					(?P<function_name>
+						[a-zA-Z0-9_-]+                        
+					)
 
-                  (?# Prototype assignment)
-                  (?: [\:]{2} [a-zA-Z0-9_-]* )?
+					(?# Prototype assignment)
+					(?: [\:]{2} [a-zA-Z0-9_-]* )?
 
-                  (?# Equals sign or colon with optional spaces around it)
-                  [ \t]* (?:(\=|\:)) [ \t]*
+					(?# Equals sign or colon with optional spaces around it)
+					[ \t]* (?:(\=|\:)) [ \t]*
 
-                  (?# optional parameters, followed by optional spaces or tabs)
-                  (?:\(.*?\)[ \t]*)?
+					(?# optional parameters, followed by optional spaces or tabs)
+					(?:\(.*?\)[ \t]*)?
 
-                  (?# Regular or fat arrow, optional space)
-                  (?:(\=|\-))\>[ \t]*
+					(?# Regular or fat arrow, optional space)
+					(?:(\=|\-))\>[ \t]*
 
-                  (?# One-line functions are OK)
-                  .*$
+					(?# One-line functions are OK)
+					.*$
 
-                  (?# Function body)
-                  (?:
-                    (?:
-                      (?: \r(?P=leadspace)[ \t]+(?:.+)) |
-                      (?: \s*$)
-                    )
-                  )*
-                )
-            )]]>
+					(?# Function body)
+					(?:
+						(?:
+							\s*\r+ (?: (?P=leadspace)[ \t]+(?:.+))
+						)
+					)*
+				)
+			)]]>
         </string>
     </dict>
     </dict>
