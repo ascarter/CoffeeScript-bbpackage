@@ -1,0 +1,7 @@
+#INDENT#
+res.format(
+  html: ->
+  	<##>
+  json: ->
+  	<##>
+)
